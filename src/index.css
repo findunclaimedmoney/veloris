@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --primary-bg: #0b0a10; --accent-pink: #ec4899; --accent-purple: #a855f7; }
+body { background-color: var(--primary-bg); color: #f1f5f9; font-family: 'Inter', sans-serif; }
+.glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+.pink-gradient { background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%); }

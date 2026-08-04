@@ -1,0 +1,2 @@
+import { useParams, useNavigate } from 'react-router-dom';
+export default function Profile() { const { id } = useParams(); const navigate = useNavigate(); return <div className="min-h-screen bg-slate-950 pt-20 px-4 pb-20 text-white"><button onClick={() => navigate('/')} className="text-slate-400 hover:text-white mb-6">← Back</button><h1 className="text-4xl font-bold">Profile: {id}</h1><p className="text-slate-400">Full profile with voice details, traits, and booking button.</p></div>; }
