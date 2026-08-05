@@ -12,6 +12,7 @@ import CreatorEarnings from './routes/CreatorEarnings';
 import UserDashboard from './routes/UserDashboard';
 import CreatorDashboard from './routes/CreatorDashboard';
 import AdminDashboard from './routes/AdminDashboard';
+import RoomsPage from './routes/RoomsPage';
 import GuestDemo from './routes/GuestDemo';
 
 function App() {
@@ -23,9 +24,10 @@ function App() {
         v7_relativeSplatPath: true 
       }}
     >
-      <Routes>
-        <Route path="/" element={<Hero />} />
+      <Routes
+        <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/rooms" element={<RoomsPage />} /> 
         <Route path="/register" element={<Register />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/jess-session" element={<JessSession />} />
