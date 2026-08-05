@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
-import Hero from './routes/hero';
-import Home from './routes/Home';
+import Home from './routes/Home'; // ✅ Changed from Hero to Home
 import Register from './routes/Register';
 import Profile from './routes/Profile';
 import CreatorStudio from './routes/CreatorStudio';
@@ -12,28 +11,26 @@ import CreatorEarnings from './routes/CreatorEarnings';
 import UserDashboard from './routes/UserDashboard';
 import CreatorDashboard from './routes/CreatorDashboard';
 import AdminDashboard from './routes/AdminDashboard';
-import RoomsPage from './routes/RoomsPage';
 import GuestDemo from './routes/GuestDemo';
+import RoomsPage from './routes/RoomsPage'; // ✅ Added RoomsPage
 
 function App() {
   return (
-    // 👇 ADDED THE future FLAGS HERE TO CLEAR THE YELLOW WARNINGS
     <BrowserRouter 
       future={{ 
         v7_startTransition: true, 
         v7_relativeSplatPath: true 
       }}
     >
-      <Routes
+      <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/rooms" element={<RoomsPage />} /> 
         <Route path="/register" element={<Register />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/jess-session" element={<JessSession />} />
         <Route path="/chat" element={<JessSession />} />
         <Route path="/try" element={<GuestDemo />} />
         <Route path="/creators" element={<BookCreator />} />
+        <Route path="/rooms" element={<RoomsPage />} /> {/* ✅ Added Rooms Route */}
         
         <Route element={<ProtectedRoute allowedRoles={['user']} />}>
           <Route path="/user/dashboard" element={<UserDashboard />} />
